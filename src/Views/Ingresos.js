@@ -9,7 +9,7 @@ import Tabla from '../Components/Table/Tabla';
 const Ingresos = ({ navigation }) => {
 
     const handleButtonPress = () => {
-
+        navigation.navigate('AgregarIngreso');
     }
 
     const encabezados = ["Titulo", "Categoria", "Monto"]
