@@ -9,7 +9,7 @@ import Tabla from '../Components/Table/Tabla';
 const Gasto = ({ navigation }) => {
 
     const handleButtonPress = () => {
-        
+        navigation.navigate("AgregarGasto")
     }
 
     const encabezados = ["Titulo", "Categoria", "Monto", "Fecha"]
