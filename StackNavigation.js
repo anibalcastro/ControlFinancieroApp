@@ -5,8 +5,9 @@ import LoginScreen from './src/Views/Login';
 import HomeScreen from './src/Views/Home'; 
 import IngresosScreen from './src/Views/Ingresos';
 import GastosScreen from './src/Views/Gastos';
-import AgregarIngreso from './src/Views/AgregarIngreso';
-import AgregarGasto from './src/Views/AgregarGasto';
+import AgregarIngresoScreen from './src/Views/AgregarIngreso';
+import AgregarGastoScreen from './src/Views/AgregarGasto';
+import ActualizarPerfilScreen from './src/Views/Perfil';
 
 
 const Stack = createStackNavigator();
@@ -18,8 +19,9 @@ const StackNavigator = () => {
       <Stack.Screen name='Home' component={HomeScreen} />
       <Stack.Screen name='Ingresos' component={IngresosScreen} />
       <Stack.Screen name='Gastos' component={GastosScreen} />
-      <Stack.Screen name='AgregarIngreso' component={AgregarIngreso} />
-      <Stack.Screen name='AgregarGasto' component={AgregarGasto} />
+      <Stack.Screen name='AgregarIngreso' component={AgregarIngresoScreen} />
+      <Stack.Screen name='AgregarGasto' component={AgregarGastoScreen} />
+      <Stack.Screen name='Perfil' component={ActualizarPerfilScreen} />
     </Stack.Navigator>
   );
 };

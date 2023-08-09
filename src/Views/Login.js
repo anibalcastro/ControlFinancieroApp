@@ -51,7 +51,7 @@ const LoginScreen = ({navigation}) => {
                 style={styles.input}
             />
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Login</Text>
+                <Text style={styles.buttonText}>Iniciar Sesión</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Registarse</Text>
@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     logo: {
-        width: 150,
-        height: 150,
+        width: 200,
+        height: 200,
         marginBottom: 20,
     }
 });

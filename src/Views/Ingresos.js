@@ -4,6 +4,7 @@ import { Text, StyleSheet, View, TouchableOpacity, ScrollView } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Tarjeta from '../Components/Cards/Tarjetas';
 import Tabla from '../Components/Table/Tabla';
+import Profile from '../Components/Profile/Profile';
 
 
 const Ingresos = ({ navigation }) => {
@@ -22,25 +23,23 @@ const Ingresos = ({ navigation }) => {
         ['Comisión', 'Ingreso Extra', '$10.00'],
         ['10% Pago', 'Ahorros', '$10.00'],
         ['10% Pago', 'Ahorros', '$10.00'],
-        ['10% Pago', 'Ahorros', '$10.00'],
-        ['10% Pago', 'Ahorros', '$10.00'],
-        ['10% Pago', 'Ahorros', '$10.00'],
-        ['10% Pago', 'Ahorros', '$10.00'],
+ 
     ];
 
 
     return (
         <SafeAreaView style={styles.container}>
-                <Text style={styles.heading}>Ingresos!</Text>
-                <Text style={styles.texto}>En esta sección podrás encontrar el monto total de ingresos mensuales, y llevar un registro del mismo.</Text>
+            <View style={styles.containerProfile}>
+                <Profile navigation={navigation}/>
+            </View>
 
-                <Tarjeta titulo='INGRESOS' monto="$1000" color="green" />
+                <Tarjeta titulo='TOTAL DE INGRESOS' monto="$1000" color="green" />
 
                 <View style={styles.divider} />
 
-                <Text style={styles.ingresos}>Ingresos registrados!</Text>
+                <Text style={styles.ingresos}>INGRESOS REGISTRADOS</Text>
 
-                <Tabla encabezado={encabezados} data={data} />
+                <Tabla encabezado={encabezados} data={data} color={"#77cc77"} />
 
                 <TouchableOpacity style={styles.floatingButton} onPress={handleButtonPress}>
                     <Text style={styles.buttonText}>+</Text>
@@ -97,6 +96,9 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 24,
     },
+    containerProfile : {
+        marginBottom: 10
+    }
 
 
 });
