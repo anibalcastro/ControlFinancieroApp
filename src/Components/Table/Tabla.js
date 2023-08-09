@@ -2,19 +2,21 @@ import React from 'react';
 import { View, ScrollView , StyleSheet } from 'react-native';
 import { Table, Row, Rows } from 'react-native-table-component'; // Asegúrate de importar correctamente Table, Row y Rows
 
-const Tabla = ({ encabezado, data }) => {
+const Tabla = ({ encabezado, data, color }) => {
 
     return (
         <View style={styles.container}>
             <ScrollView>
-            <Table borderStyle={{ borderWidth: 1, borderColor: '#ffa1d2' }}>
-                <Row data={encabezado} style={styles.HeadStyle} textStyle={styles.tableTextHead} />
-                <Rows data={data} textStyle={styles.TableText} />
-            </Table>
+            <Table borderStyle={{ borderWidth: 1, borderColor: color }}>
+            <Row data={encabezado} style={[styles.HeadStyle, { backgroundColor: color }]} textStyle={styles.tableTextHead} />
+            <Rows data={data} textStyle={styles.TableText} />
+        </Table>
             </ScrollView>
         </View>
     );
 };
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -27,7 +29,6 @@ const styles = StyleSheet.create({
     HeadStyle: {
         height: 60,
         alignContent: "center",
-        backgroundColor: '#ffe0f0',
         fontWeight: 'bold',
     },
     tableTextHead : {
