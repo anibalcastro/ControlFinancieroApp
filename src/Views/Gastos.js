@@ -4,6 +4,7 @@ import { Text, StyleSheet, View, TouchableOpacity, ScrollView } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Tarjeta from '../Components/Cards/Tarjetas';
 import Tabla from '../Components/Table/Tabla';
+import Profile from '../Components/Profile/Profile';
 
 
 const Gasto = ({ navigation }) => {
@@ -24,16 +25,17 @@ const Gasto = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-                <Text style={styles.heading}>Gastos</Text>
-                <Text style={styles.texto}>En esta sección podrás encontrar el monto total de gastos mensuales, y podes observar tus ultimas transacciones.</Text>
+                <View style={styles.containerProfile}>
+                <Profile  navigation={navigation}/>
+                </View>
 
-                <Tarjeta titulo='GASTOS' monto="$500" color="red" />
+                <Tarjeta titulo='TOTAL DE GASTOS' monto="$500" color="red" />
 
                 <View style={styles.divider} />
 
-                <Text style={styles.ingresos}>Gastos registrados</Text>
+                <Text style={styles.ingresos}>GASTOS REGISTRADOS</Text>
 
-                <Tabla encabezado={encabezados} data={data} />
+                <Tabla encabezado={encabezados} data={data} color={"#ff9999"} />
 
                 <TouchableOpacity style={styles.floatingButton} onPress={handleButtonPress}>
                     <Text style={styles.buttonText}>+</Text>
@@ -90,6 +92,9 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 24,
     },
+    containerProfile : {
+        marginBottom: 10
+    }
 
 
 });

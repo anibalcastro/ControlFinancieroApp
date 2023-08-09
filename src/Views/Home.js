@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet,  TouchableOpacity, Image  } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Tarjeta from '../Components/Cards/Tarjetas';
+import Profile from '../Components/Profile/Profile'
 
 
 const HomeScreen = ({navigation}) => {
@@ -16,6 +17,7 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Profile navigation={navigation}/>
       <Text style={styles.heading}>Bienvenido!</Text>
       <Text style={styles.texto}>Te recordamos registrar todos los ingresos y gastos, para llevar un mejor control.</Text>
 
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // Alinea los botones en el centro horizontal
     marginBottom: 10,
     gap: 60
-  },
+  }
 
 });
 
